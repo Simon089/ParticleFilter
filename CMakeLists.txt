@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project( ParticleFilter )
+file(GLOB_RECURSE SOURCES "src/*.cpp")
+set (CMAKE_CXX_STANDARD 11)
+find_package( OpenCV REQUIRED )
+add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
+target_link_libraries( ParticleFilter ${OpenCV_LIBS} )
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -pedantic")
