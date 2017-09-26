@@ -11,8 +11,13 @@ cd build
 cmake ..
 make
 ```
-## Run the application with `./ParticleFilter`
+## Run the application
+`./ParticleFilter`
 This will open two windows: one with some information about the environment, such as number of particles, number of obstacles, measurement distance, and measurement noise.
 The other window contains four trackbars to adjust these values.
 Pressing 'q' quits the application, anything else starts the Particle Filter with the given variables.
 Here 'q' also quits the current run, anything else executes the next step.
+
+### Possible improvements
+- [ ] Improve resampling, so it has a linear time complexity
+- [ ] Display mean and variance of particles
